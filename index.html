@@ -1,0 +1,95 @@
+<html5>
+    <head>
+        <title>First website using Js</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+   <div class="main">
+       <nav>
+           <div class="logo">
+              <h1>DiVInE <br>PhONeS</h1>
+           </div>
+
+           <div class="navlinks">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Phones</a></li>
+                  <li><a href="#">Accessories</a></li>
+                  <li><a href="#">Cart</a></li>
+              </ul>
+           </div>
+       </nav>
+
+       <div class="information">
+           <div class="overlay">
+               
+           </div>
+           <img src="images/Phone.png" class="mobile">
+           <div id="circle">
+               <div class="feature one">
+                   <img src="images/Battery.PNG">
+                   <div>
+                       <h1>Battery</h1>
+                       <p>6500 mAh Battery,<br>540 hrs standby</p>
+                   </div>
+               </div>
+               <div class="feature two">
+                   <img src="images/Display.PNG">
+                   <div>
+                       <h1>Display</h1>
+                       <p>Super amoled display,<br>More than 670006 colors</p>
+                   </div>
+               </div>
+               <div class="feature three">
+                   <img src="images/Processor.PNG">
+                   <div>
+                       <h1>Snapdragon 975</h1>
+                       <p>Powerfull gaming experience,<br>Made for multi-tasking</p>
+                   </div>
+               </div>
+               <div class="feature four">
+                    <img src="images/Camera.PNG">
+                    <div>
+                       <h1>Camera</h1>
+                       <p>128Mp front 68Mp rear,<br>Wide angle lens</p>
+                   </div>
+               </div>
+
+           </div>
+
+           
+           <div class="controls">
+               <img src="images/Arrow.PNG" id="upbt">
+               <h3>Features</h3>
+               <img src="images/Arrow.PNG" id="downbt">
+
+           </div>
+   </div>
+
+   <script>
+        var circle = document.getElementById ("circle");
+        var upbt = document.getElementById ("upbt");
+        var downbt = document.getElementById ("downbt");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbt.onclick = function()
+        {
+           rotateSum = rotateValue + "rotate(-90deg)";
+           circle.style.transform = rotateSum;
+           rotateValue = rotateSum;
+        }
+
+        downbt.onclick = function()
+        {
+           rotateSum = rotateValue + "rotate(90deg)";
+           circle.style.transform = rotateSum;
+           rotateValue = rotateSum;
+        }
+   </script>
+
+</body>    
+</html5>
