@@ -1,0 +1,187 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+}
+
+.main{
+    width:100%;
+    height:100vh;
+    position: relative;
+    overflow:hidden;
+    background:linear-gradient( to right,aqua,aquamarine,white);
+}
+
+nav{
+    width:80%;
+    position:sticky;
+    margin:20px auto;
+    z-index:1;
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    border-radius: 40px;
+}
+
+.logo{
+    flex-basis: 20%;
+    cursor: pointer;
+}
+
+.logo h1{
+    font-family:Verdana;
+    text-shadow: 1px 2px 10px aqua;
+    color: white;
+}
+
+.navlinks{
+    flex:1;
+    text-align: right;
+    
+}
+
+.navlinks ul li{
+     list-style: none;
+     display:inline-block;
+     margin: 0 20px;
+     position:relative;
+}
+
+.navlinks ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navlinks ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    left: 0;
+    bottom: -5;
+    transition: 0.5s;
+    position:absolute;
+}
+
+.navlinks ul li :hover::after{
+    width:100%;
+}
+
+.information{
+    width:850px;
+    height:850px;
+    position:absolute;
+    top:50%;
+    left:-10%;
+    transform: translateY(-50%);
+}
+
+#circle{
+    width:850px;
+    height:850px;
+    position:absolute;
+    top:0;
+    left: 0%;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.feature img{
+    width:70px;
+}
+
+.feature{
+    position:absolute;
+    display:flex;
+    color:black;
+}
+
+.feature div{
+    margin-left:30px;
+}
+
+.feature div p{
+    margin-top:10px;
+}
+
+.one{
+    top:450px;
+    right:50px;
+}
+
+.two{
+    top:100px;
+    left:360px;
+    transform: rotate(-90deg); 
+}
+
+.three{
+    left:-70px;
+    bottom:460;
+    transform: rotate(-180deg); 
+}
+
+.four{
+    bottom:110px;
+    left:220px;
+    transform: rotate(-270deg); 
+}
+
+.mobile{
+    width:230px;
+    position:absolute;
+    top:55%;
+    left:35%;
+    transform:translateY(-50%);
+    z-index: 1;
+}
+
+.controls{
+    position:absolute;
+    right:-60%;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.controls h3{
+    margin:20px 0;
+    color:black;
+}
+
+#upbt{
+    cursor:pointer;
+    width:25px;
+}
+
+#upbt:hover{
+    width:35px;
+}
+
+#downbt{
+    cursor:pointer;
+    width:25px;
+    transform: rotate(180deg);
+}
+
+#downbt:hover{
+    width:35px;
+}
+
+
+.overlay{
+    width:0;
+    height: 0;
+    border-top: 500px solid black;
+    border-left: 500px solid black;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid black;
+    position:absolute;
+    left:0;
+    top:0;
+
+}
